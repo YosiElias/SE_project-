@@ -622,7 +622,7 @@ public class DetailActivity extends AppCompatActivity
 
                     Review r = child.getValue(Review.class);
                     assert r != null;
-                    String review = "Name: " + r.getName()+ "\n";
+                    String review = "\nName: " + r.getName()+ "\n";
                     review += "Review: " + r.getReview()+ "\n";
 
 //                    String review = "Name: " + child.getKey()+ "\n";
@@ -650,8 +650,6 @@ public class DetailActivity extends AppCompatActivity
 
         ListView lv = (ListView) convertView.findViewById(R.id.lv);
         lv.setAdapter(adapterReview);
-
-        alertDialog.setTitle("Reviews:\n");
 
         alertDialog.show();
     }
